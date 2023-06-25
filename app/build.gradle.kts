@@ -70,4 +70,5 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
     debugImplementation(libs.navigation.compose)
     debugImplementation(libs.lottie.compose)
+    debugImplementation(libs.otpView)
 }

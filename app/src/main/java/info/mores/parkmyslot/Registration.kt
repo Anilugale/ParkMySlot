@@ -1,6 +1,5 @@
-package info.mores.parkmyslot.util
+package info.mores.parkmyslot
 
-import android.content.res.Resources.Theme
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -33,9 +32,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import info.mores.parkmyslot.Screen
-import info.mores.parkmyslot.ui.theme.ParkMySlotTheme
-import info.mores.parkmyslot.ui.theme.Purple40
 
 @Preview(showSystemUi = true)
 @Composable
@@ -152,7 +148,7 @@ fun Registration(navController: NavHostController?) {
             fontWeight = FontWeight.ExtraBold,
             modifier = Modifier.padding(vertical = 25.dp)
                 .clickable {
-                    navController?.navigate(Screen.Registration)
+                    navController?.navigate(Screen.Login.route)
                 }
         )
     }

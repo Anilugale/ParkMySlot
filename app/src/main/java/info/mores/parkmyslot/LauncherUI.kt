@@ -15,7 +15,6 @@ import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import info.mores.parkmyslot.ui.theme.SplashBG
-import info.mores.parkmyslot.util.Registration
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -25,11 +24,14 @@ fun LauncherUI() {
 
     NavHost(navController = navController, startDestination = Screen.Splash.route) {
         composable(Screen.Splash.route) { Splash(navController) }
-        composable(Screen.Registration.route) { Registration(navController)}
-        composable(Screen.Login.route) { }
-        composable(Screen.Dashboard.route) { }
+        composable(Screen.Registration.route) { Registration(navController) }
+        composable(Screen.Login.route) { LoginScreen(navController) }
+        composable(Screen.OTP.route) { OTPScreen(navController) }
+        composable(Screen.Dashboard.route) { DashboardScreen(navController) }
     }
 }
+
+
 
 
 sealed class Screen(val route: String) {
@@ -37,7 +39,8 @@ sealed class Screen(val route: String) {
     object Splash : Screen("Splash")
     object Registration : Screen("Registration")
     object Login : Screen("Login")
-    object Dashboard : Screen("Login")
+    object Dashboard : Screen("Dashboard")
+    object OTP : Screen("OTP")
 
 }
 
