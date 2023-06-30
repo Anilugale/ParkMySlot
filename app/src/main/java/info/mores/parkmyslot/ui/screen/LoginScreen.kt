@@ -1,4 +1,4 @@
-package info.mores.parkmyslot
+package info.mores.parkmyslot.ui.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,6 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import info.mores.parkmyslot.Screen
 
 
 @Preview

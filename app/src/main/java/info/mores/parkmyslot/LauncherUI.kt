@@ -14,6 +14,11 @@ import androidx.navigation.compose.rememberNavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
+import info.mores.parkmyslot.ui.screen.AddVehicleScreen
+import info.mores.parkmyslot.ui.screen.DashboardScreen
+import info.mores.parkmyslot.ui.screen.LoginScreen
+import info.mores.parkmyslot.ui.screen.OTPScreen
+import info.mores.parkmyslot.ui.screen.Registration
 import info.mores.parkmyslot.ui.theme.SplashBG
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -22,12 +27,13 @@ import kotlinx.coroutines.launch
 fun LauncherUI() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Screen.Splash.route) {
+    NavHost(navController = navController, startDestination = Screen.Dashboard.route) {
         composable(Screen.Splash.route) { Splash(navController) }
         composable(Screen.Registration.route) { Registration(navController) }
         composable(Screen.Login.route) { LoginScreen(navController) }
         composable(Screen.OTP.route) { OTPScreen(navController) }
         composable(Screen.Dashboard.route) { DashboardScreen(navController) }
+        composable(Screen.AddVehicleScreen.route) { AddVehicleScreen(navController) }
     }
 }
 
@@ -41,6 +47,7 @@ sealed class Screen(val route: String) {
     object Login : Screen("Login")
     object Dashboard : Screen("Dashboard")
     object OTP : Screen("OTP")
+    object AddVehicleScreen : Screen("AddVehicleScreen")
 
 }
 
